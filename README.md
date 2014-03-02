@@ -1,4 +1,3 @@
-capistrano-bundle
-=================
+### Capistrano Bundle
 
-Very simple asset bundling for Capistrano 3.x
+A fast and simple asset bundling extension for Capistrano 3.x
