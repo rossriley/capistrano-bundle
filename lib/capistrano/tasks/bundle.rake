@@ -16,7 +16,9 @@ namespace :bundle do
                 build_destination = fetch(:bundle_build_path)+"/"+bundle[2]
                 build_target = build_destination+bundle_name+fetch(:bundle_build_suffix)+bundle_extension
                 on roles(:web) do
-                    execute :mkdir, '-p', build_destination
+                    unless test "[ -d #{build_destination} ]"
+                        execute :mkdir, '-p', build_destination
+                    end
                     upload! StringIO.new(bundle_output), build_target
                 end
             end
