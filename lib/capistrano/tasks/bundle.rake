@@ -33,8 +33,8 @@ namespace :load do
     task :defaults do
         set :bundle_build_path, -> { fetch(:deploy_to) }
         set :bundle_dirs, [
-            ["public/stylesheets/*/", "**/*.css", "public/stylesheets/build/"],
-            ["public/javascripts/*/", "**/*.js",  "public/javascripts/build/"]
+            #["public/stylesheets/*/", "**/*.css", "public/stylesheets/build/"],
+            #["public/javascripts/*/", "**/*.js",  "public/javascripts/build/"]
         ]
         set :bundle_build_suffix, "_combined"
     end
